@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="kofc-logo.png" />
+  <title>Add Event</title>
+  <style>
+    body {
+        font-family: "Roboto", sans-serif;
+        background-color: #161B5F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    .event-form {
+        width: 80vh;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-form h2 {
+        margin: 0 0 10vh 0;
+        color: #161B5F;
+        font-size: 3.5rem;
+    }
+
+    .event-field {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        }
+
+    .event-field h3 {
+        margin: 0 0 5px 0;
+        font-size: 1.5rem;
+        color: #161B5F;
+    }
+
+    .event-field input,
+    .event-field select {
+        width: 90%;
+        font-size: 1.5rem;
+        padding: 10px;
+        border: 3px solid gray;
+        filter: drop-shadow(4px 4px 4px rgba(144, 144, 144, 0.25));
+        border-radius: 0.5vh;
+    }
+
+    .date-category {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .date-field,
+    .category-field {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        align-items: flex-start;
+    }
+
+    .date-field h3,
+    .category-field h3 {
+        margin: 0 0 5px 0;
+        font-size: 1.5rem;
+        color: #161B5F;
+    }
+    
+    .date-field input,
+    .category-field select {
+        font-size: 1.5rem;
+        padding: 1vh;
+        border: 3px solid gray;
+        filter: drop-shadow(4px 4px 4px rgba(144, 144, 144, 0.25));
+        border-radius: 0.5vh;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .category-field select {
+        width: 85%;
+    }
+    
+  
+    
+    .event-form button {
+        width: 30%;
+        height: 10%;
+        font-size: 1.8rem;
+        margin: 15% 0 0 0;
+        border: none;
+        border-radius: 0.5vh;
+        background-color: #161B5F;
+        color: #F0F1F6;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .event-form button:hover {
+        background-color: #E5D49E;
+        color: #161B5F;
+    }
+/* Responsive Styles */
+@media (max-width: 48rem) { 
+    .event-form {
+        width: 80vw;
+        height: auto;
+        padding: 3vh;
+        min-height: 70vh; 
+    }
+
+    .event-form h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3vh;
+    }
+
+    .event-field {
+        width: 100%; 
+        margin-bottom: 1.5vh;
+    }
+
+    .event-field h3 {
+        font-size: 1rem;
+    }
+
+    .event-field input,
+    .event-field select {
+        font-size: 0.875rem;
+        padding: 0.8vh;
+    }
+
+    .date-category {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5vh;
+    }
+
+    .date-field,
+    .category-field {
+        width: 100%; 
+    }
+
+    .date-field h3,
+    .category-field h3 {
+        font-size: 1rem;
+    }
+
+    .date-field input,
+    .category-field select {
+        font-size: 0.875rem;
+        padding: 0.8vh;
+    }
+
+    .event-form .submit-btn {
+        width: 50%;
+        height: 6vh;
+        font-size: 1.25rem;
+        margin-top: 3vh;
+    }
+}
+
+@media (max-width: 30rem) { 
+    .event-form {
+        padding: 2vh;
+    }
+
+    .event-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2vh;
+    }
+
+    .event-field h3,
+    .date-field h3,
+    .category-field h3 {
+        font-size: 0.875rem;
+    }
+
+    .event-field input,
+    .event-field select,
+    .date-field input,
+    .category-field select {
+        font-size: 0.75rem;
+        padding: 0.6vh;
+    }
+
+    .event-form .submit-btn {
+        width: 60%;
+        height: 5vh;
+        font-size: 1rem;
+    }
+}
+
+
+</style>
+</head>
+<body>
+  <div class="event-form">
+    <h2>Create Event</h2>
+
+
+    <div class="event-field">
+      <h3>Event Name</h3>
+      <input type="text" id="event-name" placeholder="Enter event name">
+    </div>
+
+ 
+    <div class="event-field">
+      <h3>Location</h3>
+      <input type="text" id="location" placeholder="Enter location">
+    </div>
+
+
+    <div class="date-category">
+      <div class="date-field">
+        <h3>Date</h3>
+        <input type="date" id="date">
+      </div>
+      <div class="category-field">
+        <h3>Category</h3>
+        <select id="category">
+          <option value="seminar">Seminar</option>
+          <option value="meeting">Meeting</option>
+          <option value="trip">Trip</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit">Add to List</button>
+  </div>
+</body>
+</html>

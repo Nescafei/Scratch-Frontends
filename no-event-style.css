@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #F0F1F6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030D4E;
+    padding: 1vh 2vh;
+}
+
+.logo img {
+    width: 8vh;
+    height: 8vh;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5vh;
+    padding-right: 5vh;
+}
+
+nav ul li a {
+    color: #F0F1F6;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 120vh;
+    margin: 0 auto;
+    padding: 4vh 2vh; 
+}
+
+/* Council Details Section */
+.council-details {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    margin-bottom: 4vh;
+}
+
+.council-profile {
+    background-color: #F0F1F6;
+    border: 1.8px solid rgba(22, 27, 95, 0.4);
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1vh;
+    padding: 2vh;
+    text-align: center;
+    box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, 0.1);
+}
+
+.council-logo {
+    text-align: center;
+}
+
+.council-logo img {
+    width: 15vh; 
+    height: 15vh;
+    margin-bottom: 1vh;
+    background-color: #fff;
+    border-radius: 1vh; 
+    padding: 1vh; 
+}
+
+.council-logo p {
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.council-info {
+    flex: 1;
+    text-align: left;
+    margin: 8vh;
+}
+
+.council-info h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1vh;
+    font-weight: 400;
+}
+
+.council-info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Current Events Section */
+.current-events, .current-officers {
+    text-align: center;
+    margin: 15vh;
+}
+
+.current-events h2, .current-officers h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2vh;
+}
+
+.no-events {
+    display: none;
+    font-size: 2rem;
+    font-weight: 500;
+    color: red;
+    margin: 5vh 0;
+    text-align: center;
+}
+
+.events-grid, .officers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6vh;
+    width: auto;
+    max-width: 80vh;
+    max-height: 90vh;
+    margin: 6vh auto;
+    justify-content: center;
+}
+
+.event, .officer {
+    background-color: #F0F1F6;
+    border: 1.8px solid rgba(22, 27, 95, 0.4);
+    border-radius: 1vh;
+    padding: 2vh;
+    text-align: center;
+    box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, 0.1);
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.event:hover, .officer:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 0.3s;
+}
+
+.event img, .officer img {
+    width: 10vh;
+    height: 10vh;
+    margin: 1vh;
+    border-radius: 1vh;
+}
+
+.officer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    color: #030D4E;
+}
+
+.event p, .officer p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo img {
+        width: 6vh;
+        height: 6vh;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2vh;
+        padding-right: 1.3vh;
+    }
+    
+    nav ul li a {
+        color: #F0F1F6;
+        text-decoration: none;
+        font-size: 0.5rem;
+        font-weight: 200;
+    }
+
+    .council-info {
+        flex: 1;
+        text-align: center;
+        margin: 6vh;
+    }
+
+    .council-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .officers-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="kofc-logo.png">
+
+    <title>Login</title>
+</head>
+<style>
+html {
+    scroll-behavior: smooth;
+    }
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color:#161B5F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+/* Whole Container */
+.login-container {
+    width: 55vh;
+    background-color: #fff;
+    text-align: center;
+    background: #F0F1F6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 36px -7px rgba(0, 0, 0, 0.25);
+    border-radius: 1vh;
+}
+.login-container img {
+    border-radius: 50%;
+    margin-top: 5vh;
+}
+
+.login-container h1 {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 5vh;
+    color: #161B5F; 
+}
+/* =============================================================== */
+
+
+
+/* for email and password entry */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 36.5vh;
+    height: 2.5vh;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 500;
+    padding: 10px;
+    margin: 8px;
+    background: #ffffff;
+    border: 3px solid gray;
+    filter: drop-shadow(4px 4px 4px rgba(144, 144, 144, 0.25));
+    border-radius: 1vh;
+    transition: 0.3s ease-in-out;
+}
+.login-container input:hover[type="email"],
+.login-container input:hover[type="password"]  {
+    border: 3px solid rgb(61, 56, 56);
+}
+
+/* =============================================================== */
+
+
+/* forgot password style */
+.forgotten-pass {
+    margin-top: 2vh;
+    text-align: left;
+    margin-left: 7vh;
+    line-height: 3vh;
+    font-family:"Noto Sans", sans-serif;
+    font-weight: 100;
+    font-size: 2vh;
+}
+.forgotten-pass a{
+    text-decoration: none;
+    color: #161B5F;
+    transition: 0.2s ease-in-out;
+}
+.forgotten-pass a:hover {
+    color: #617b94;
+}
+/* =============================================================== */
+
+/* single sign in button style */
+.sign-in-solo button {
+    margin: 5vh;
+    border: none;
+    border-radius: 1vh;
+    width: 16vh;
+    height: 6vh;
+    font-size: 2.3vh;
+    cursor: pointer;
+    background: #161B5F;
+    color: #F0F1F6;
+    transition: 0.2s ease-in-out;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.sign-in-solo button:hover {
+    background-color: #E5D49E;
+    color: #161B5F;
+}
+/* =============================================================== */
+</style>
+<body>
+    <div class="login-container">
+        <img src="kofc-logo.png" alt="kofc logo" width="100vh" height="100vh">
+        <h1>Login Credentials</h1>
+
+        <!-- user email and password entry -->
+            <div class="user-entry">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+        <!-- forgot password -->
+            <div class="forgotten-pass">
+                <a href="#">Forgot password?</a>
+            </div>
+        
+        <!-- sign-in button at the bottom -->
+            <div class="sign-in-solo">
+                <button>Sign in</button>
+            </div>
+    </div>
+</body>
+</html>
