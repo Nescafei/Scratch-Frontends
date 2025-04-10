@@ -43,7 +43,6 @@
         <section class="current-events">
             <h2>Current Events</h2>
             <div class="events-grid" id="eventsGrid">
-                <!-- Events will be dynamically added here -->
             </div>
             <div class="no-events" id="noEventsMessage">No Available Events</div>
         </section>
@@ -159,43 +158,5 @@
     document.addEventListener("DOMContentLoaded", function () {
         const eventsGrid = document.getElementById("eventsGrid");
         const noEventsMessage = document.getElementById("noEventsMessage");
-
-        // Simulate fetching events (replace this with your actual data)
-        const events = [
-    //     {
-    //     title: "Charity Drive",
-    //     date: "Mar 20 – Mar 21",
-    //     image: "kofc-logo.png"
-    // },
-    // {
-    //     title: "Community Meeting",
-    //     date: "April 27",
-    //     image: "kofc-logo.png"
-    // }
-    ]; // Empty array for no events (you can populate this with real data)
-
-        if (events.length === 0) {
-            // No events: hide the grid and show the message
-            eventsGrid.style.display = "none";
-            noEventsMessage.style.display = "block";
-        } else {
-            // Events exist: hide the message and populate the grid
-            noEventsMessage.style.display = "none";
-            eventsGrid.style.display = "grid";
-
-            // Example of adding events dynamically (if you have events)
-            events.forEach(event => {
-                const eventDiv = document.createElement("div");
-                eventDiv.classList.add("event");
-                eventDiv.innerHTML = `
-                    <img src="${event.image || 'kofc-logo.png'}" alt="Event Image">
-                    <p>${event.title}</p>
-                    <p>${event.date}</p>
-                `;
-                eventsGrid.appendChild(eventDiv);
-            });
-        }
-    });
-    </script>
 </body>
 </html>
